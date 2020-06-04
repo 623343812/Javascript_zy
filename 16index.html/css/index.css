@@ -1,0 +1,40 @@
+.nav {
+    height:30px;
+    background:#e3e4e5;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-box{margin:0px auto;
+widows: 1190px;
+text-align: right;
+}
+.nav-box ul li{
+    display:inline-block;
+    font-size: 12px;
+    padding:0px 10px;
+    height:30px;
+    line-height: 30px;
+    position:relative;
+}
+
+
+
+.nav-box ul li a{
+    color: #999999;
+    text-decoration: none;
+}
+
+.nav-box ul li:not(:last-child):after {
+    content: "";
+    width:1px;
+    height:14px;
+    background:#cccccc;
+    position: absolute;
+    top: 8px;
+    right: 0px;
+    display: block;
+}
+
+.nav-box ul li a:hover{
+    color: #f10215;
+}
