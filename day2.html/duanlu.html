@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.我们的布尔值参与的逻辑运算 true && false == false
+        //2.123 && 456 是值 或者是 表达式  参与逻辑运算
+        //3.逻辑与短路运算 如果表达式1 结果为真 则返回表达式2 如果表达式1为假 那么返回表达式1
+        console.log( 123 && 456);//456
+        console.log(0 && 456);//0
+        console.log(0 && 1+2 && 456*987);//0
+        //如果有空的或者否定的为假 其余是真的 0 '' null undefined NaN
+        console.log(''&& '字符串');
+        //4. 逻辑或短路运算  如果表达式1 确定为真 则返回表达式1 如果表达式1确定为假 则返回表达式2
+        console.log(1234 || 5678);//1234
+        console.log(1234 || 5678 || 123+123);//1234
+        console.log(0 ||456 || 555);//456
+        var num = 0;
+        console.log(123 || num++);//123
+        console.log(num);//0
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
