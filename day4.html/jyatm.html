@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var money = 100;
+        var num = prompt('请输入您要的操作\n1.存钱\n2.取钱\n3.显示余额\n4.退出');
+        if(num == 1){
+            sum = prompt('请输入存钱的数量')
+            money = parseFloat(sum) + money;
+            alert('你的余额是' + money);
+            
+        }else if(num == 2){
+            sum = prompt('请输入取钱的数目');
+            money = money - parseFlaoat(sum);
+            alert('你的余额是' + money);
+        }else if(num == 3){
+            alert('你的余额是' + money);
+        }else if(num == 4){
+            alert('已退出');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
