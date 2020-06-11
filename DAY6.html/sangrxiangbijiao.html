@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num1 = prompt('请输入第一个数字');
+        var num2 = prompt('请输入第二个数字');
+        var num3 = prompt('请输入第三个数字');
+        function max(num1,num2,num3){
+            if(num1 > num2 && num1 > num3){
+                max = num1;
+            }else if(num2 > num1 && num2 > num3){
+                max = num2;
+            }else{max = num3;}
+            return max;
+        }
+        alert('最大值是'+ max(num1,num2,num3));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
