@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num1 = 0;
+        var num2 = 0;
+        var way = prompt('欢迎使用简易计算器:\n1.加法运算:\n2.减法运算:\n3.乘法运算:\n4除法运算:\n5.退出:\n请输入您的选项');
+        if (way == 1) {
+            num1 = prompt('请输入第一个值:');
+            num2 = prompt('请输入第二个值:');
+            num = parseFloat(num1) + parseFloat(num2);
+            alert(num);
+        } else if (way == 2) {
+            num1 = prompt('请输入第一个值:');
+            num2 = prompt('请输入第二个值:');
+            num = parseFloat(num1) - parseFloat(num2);
+            alert(num);
+        } else if (way == 3) {
+            num1 = prompt('请输入第一个值:');
+            num2 = prompt('请输入第二个值:');
+            num = parseFloat(num1) * parseFloat(num2);
+            alert(num);
+        } else if (way == 4) {
+            num1 = prompt('请输入第一个值:');
+            num2 = prompt('请输入第二个值:');
+            num = parseFloat(num1) / parseFloat(num2);
+            alert(num);
+        }
+        else { alert('退出') };
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
