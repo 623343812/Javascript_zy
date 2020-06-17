@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>focus伪类选择器</title>
+    <style>
+        input:focus {
+          background-color: green;
+          color:pink;
+        }
+        p {
+            color:green;
+            background-color: purple;
+            width: 500px ;
+           
+        }
+        span {
+            width: 200px;
+            height: 200px;
+            color:pink;
+            background-color: #fff;
+        }
+        .sad>span {
+            width:200px;
+            height:150px;
+            background-color: purple;
+        }
+        .baidu {
+            font-size: 30px;
+            font-weight: 700;
+            font-family: "宋体";
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" >
+    <input type="text" >
+    <input type="text" >
+    <p>霸道，独占一行</p>瑟瑟发抖
+    <div class="sad"><span>温和</span>
+    <span>不刺激</span></div>
+    <a href="http://www.baidu.com"><a href="http://www.souhu.com">搜狐</a></a>
+    <a href="http://www.baidu.com" target="blank"><div class="baidu">百度</div></a>
+</body>
+</html>
