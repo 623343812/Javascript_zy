@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动注意事项</title>
+    <style>
+        .clearfix::after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        .clearfix {
+            *zoom: 1p;
+        }
+        div {
+
+            height: 100px;
+            border: 2px solid red;
+           
+        }
+        .div1 {
+            width: 200px;
+            height: 200px;
+            background-color: greenyellow;
+            float: left;
+        }
+        .div2 {
+            width: 230px;
+            height: 230px;
+            background-color: blue;
+            float: left;
+ 
+            
+        }
+        .div3 {
+            width: 250px;
+            height: 250px;
+            background-color: black;
+                       float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="clearfix">
+<div class="div1">111</div>
+<div class="div2">222</div>
+<div class="div3">333</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常见的网页布局3</title>
+    <style>
+        * {
+            margin: 0; 
+            padding: 0;
+        }
+         .fudong ul li{
+             list-style: none;
+         }
+         .top{
+             text-align: center;
+             line-height: 40px;
+             height: 40px;
+             margin:4px auto 8px;
+             background-color: greenyellow;
+         }
+         .fudong {
+             width: 1100px;
+             height: 400px;
+             margin:0 auto;
+             background-color: hotpink;
+         }
+         .fudong .box1 {
+             widows: 1100px;
+             line-height: 80px;
+             height: 80px;
+             margin-bottom: 6px;
+             text-align: center;
+             background-color: greenyellow;
+         }
+         .fudong .ul1 li {
+             width: 250px;
+             height: 60px;
+             float: left;
+             background-color: greenyellow;
+             margin-right: 2px;
+             margin-bottom: 10px;
+         }
+         .fudong .ul1 .li4 {
+             margin-right: 0;
+         }
+         .fudong .ul2 li {
+             width: 250px;
+             height: 220px;
+             float: left;
+             background-color: greenyellow;
+             margin-right: 2px;
+             margin-bottom: 5px;
+         }
+         .fudong .ul1 .li8 {
+             margin-right: 0;
+         }
+         .bottom {
+             height: 150px;
+             background-color: greenyellow;
+             text-align: center;
+             line-height: 80px;
+         }
+
+
+    </style>
+</head>
+<body>
+    <div class="top">top</div>
+    <div class="fudong">
+        <div class="box1">fudong</div>
+        <ul class="ul1">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li class="li4">4</li>
+        </ul>
+        <ul class="ul2">
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li class="li8">8</li>
+        </ul>
+    </div>
+    <div class="bottom">bottom</div>
+</body>
+</html>
