@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>土豆案例</title>
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 600px;
+            height: 400px;
+            margin:100px auto;
+            background-color: skyblue;
+            position: relative;
+        }
+        .box img {
+            width: 600px;
+            height: 340px;
+        }
+        .box .box1:hover {
+            width: 600px;
+            height: 340px;
+            background-color: rgba(0,0,0,.3);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+         .box2 {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left:50%;
+            top:50%;
+            margin-left:-10px;
+            margin-top:-10px;
+            border-radius: 50%;
+            background-color: orange;
+        } */
+        *{
+            margin:0;
+            padding:0;
+        }
+        .tudou {
+            width: 500px;
+            height: 400px;
+            margin:100px auto;
+            background-color: skyblue;
+            position: relative;
+        }
+        .tudou img {
+            width: 100%;
+            height: 100%;
+        }
+        .mask {
+            display: none;  
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            height:100%;
+            background: rgba(0,0,0,0.3);          
+        }
+        .tudou:hover  .mask {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="box">
+        <img src="/image/xiaomi.png" alt="">
+        <div class="box1">
+            <div class="box2"></div>
+        </div>
+        <div class="wz">【大咖】热依扎盛赞易烊千玺敬业</div>
+    </div> -->
+    <div class="tudou">
+        <div class="mask"></div>
+            <img src="/image/xiaomi.png" alt="">
+        
+    </div>
+</body>
+</html>

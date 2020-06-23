@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淘宝轮廓图</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        li {
+            list-style: none;
+        }
+        .box {
+            width: 500px;
+            height: 300px;
+            background-color: gray;
+            margin:100px auto;
+            position:relative;
+        }
+        .box1 {
+            position:absolute;
+            top:50%;
+            margin-top:-15px;
+            left:0;
+            width: 20px;
+            height: 30px;
+        }
+        .box2 {
+            position:absolute;
+            top:50%;
+            margin-top:-15px;
+            right:0;
+            width: 20px;
+            height: 30px;
+        }
+        .yd {
+            position: absolute;
+            bottom:15px;
+            left:50%;
+            width: 70px;
+            height: 20px;
+            margin-left: -35px;
+            background: rgba(255,255,255,.3);
+            border-radius: 10px;
+        }
+        .yd li {
+            float: left;
+            width: 5px;
+            height: 5px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin: 4px;
+            margin-top:7px;
+        }
+        .yd .selected1:hover {
+            background-color: orange;
+        }
+        .yd .selected2 {
+            background-color: orange;
+        }
+        .yd .selected3 {
+            background-color: orange;
+        }
+        .yd .selected4 {
+            background-color: orange;
+        }
+        .yd .selected5 {
+            background-color: orange;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <ul class= "yd">
+            <li class="selected1"></li>
+            <li class="selected2"></li>
+            <li class="selected3"></li>
+            <li class="selected4"></li>
+            <li class="selected5"></li>
+        </ul>
+    </div>
+</body>
+</html>

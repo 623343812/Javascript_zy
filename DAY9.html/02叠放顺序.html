@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>叠放顺序</title>
+    <style>
+        .box {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+        }
+        .xd {
+            left: 20px;
+            top: 20px;
+            z-index: 1;
+            background-color: greenyellow;
+        }
+        .xe {
+            background-color: yellow;
+                        left: 40px;
+            top: 40px;
+        }
+        .gtq {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="box xd">熊大</div>
+    <div class="box xe">熊二</div>
+    <div class="box gtq">光头强</div>
+</body>
+</html>
