@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css三角强化</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 72px;
+            background-color: red;
+            float: left;
+        }
+
+        .box2 {
+            width: 150px;
+            height: 72px;
+            background-color: blue;
+            float: left;
+
+        }
+
+        .box1 .box {
+            /* width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-top: 36px solid transparent;
+            border-right: 20px solid blue;
+            border-bottom: 36px solid blue;
+            float: right; */
+            width: 0;
+            height: 0;
+            border-top: 100px solid blue;
+            border-right: 50px solid yellow;
+            border-bottom: 0px solid green;
+            border-left: 0px solid skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box"></div>
+    </div>
+    <div class="box2"></div>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>巧妙利用margin负值</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        /* ul {
+            width: 610px;
+            height: 300px;
+            background-color: pink;
+            margin: 100px auto;
+            vertical-align: bottom;
+        } */
+
+        ul li {
+            height: 200px;
+            width: 70px;
+            border: 1px solid skyblue;
+            float: left;
+            margin-left: -1px;
+            position: relative;
+
+        }
+        /* ul li:hover {
+            position: relative;
+            border:1px solid red;
+        } */
+        ul li:hover {
+            z-index:1;
+            border:1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行内块元素的巧妙运用给</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            text-align: center;
+            font-size: 8px;
+        }
+
+        .box a {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border: 1px solid red;
+            text-decoration: none;
+            line-height: 15px;
+            color: gray;
+            font-size: 8px;
+        }
+        .box .prev ,
+        .box .next{
+            width: 40px;
+        }
+        .box .wu ,
+        .box .wu1 {
+            background-color: #ffffff;
+            border:none;
+        }
+        .box input {
+            width: 20px;
+            height: 12px;
+            outline: none;
+            vertical-align: middle;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <a href="#" class="prev">&lt;&lt;上一页</a>
+        <a href="#" class="wu">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#" class="wu1">...</a>
+        <a href="#" class="next">&gt;&gt;下一页</a>
+        到第
+        <input type="text">
+        页
+        <button style= "font-size: 8px;">确定</button>
+    </div>
+</body>
+
+</html>
