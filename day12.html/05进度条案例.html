@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>进度条案例</title>
+    <style>
+        div {
+            width: 200px;
+            height: 10px;
+            border:1px solid red;
+            background-color: white;
+            border-radius: 5px;
+            padding: 1px;
+        }
+
+        div .box1 {
+            width: 30%;
+            height: 100%;
+            background-color: red;
+            transition: all 2s;
+        }
+        div:hover .box1 {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+          <div class="box1"></div>
+    </div>
+</body>
+</html>
