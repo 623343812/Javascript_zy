@@ -1,0 +1,72 @@
+/* 把我们所有标签的内外边距清零 */
+* {
+    margin: 0;
+    padding: 0;
+    /* css3盒子模型 */
+    box-sizing: border-box;
+}
+/* em 和 i 斜体的文字不倾斜 */
+em,
+i {
+    font-style: normal
+}
+/* 去掉 li 的小圆点 */
+li {
+    list-style: none
+}
+
+img {
+    /* border:0 是照顾低版本浏览器  如果图片外面包括了链接会有边框的问题*/
+    border: 0;
+    /* 取消图片底侧会有空白的问题 */
+    vertical-align: middle
+}
+
+button {
+    /* 当我们鼠标经过button的时候，鼠标会变成小手 */
+    cursor: pointer
+}
+
+a {
+    color: #666;
+    text-decoration: none
+}
+
+a:hover {
+    color: #c81623
+}
+
+button,
+input {
+    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    /* 默认有灰色边框，我们需要去掉 */
+    border:0;
+    outline:none;
+}
+
+body {
+    /* 抗锯齿性 */
+    -webkit-font-smoothing: antialiased;
+    background-color: #fff;
+    font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans
+    /* "\5B8B\4F53"宋体的意思 */
+     GB, "\5B8B\4F53", sans-serif;
+    color: #666
+}
+
+.hide,
+.none {
+    display: none
+}
+/* 清除浮动 */
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+
+.clearfix {
+    *zoom: 1
+}
