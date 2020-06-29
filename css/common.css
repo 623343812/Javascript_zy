@@ -205,14 +205,17 @@
     padding-top:30px;
 }
 .mod_service {
-    height: 80px;
+
     border-bottom: 1px solid gray ;
+    height: 80px;
+
 }
 .mod_service ul li {
     float:left;
     width: 300px;
     height: 50px;
     padding-left: 35px;
+
 }
 .mod_service ul li h5 {
     float:left;
@@ -233,6 +236,7 @@
     background: url(../jinglingtu/图层6.png) 0 -1px;
 }
 .mod_help {
+
     height: 185px;
     border-bottom: 1px solid gray;
     padding-top: 20px;
@@ -259,10 +263,12 @@
     font-size: 12px;
 }
 .mod_copyright {
+    float:left;
     text-align: center;
     padding-top: 15px;
 }
 .mod_copyright .link {
+
     margin-bottom: 6px;
 }
 .mod_copyright .link a {

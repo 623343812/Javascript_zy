@@ -1,0 +1,52 @@
+.main {
+    width: 980px;
+    height: 455px;
+    margin-left: 220px;
+    margin-top: 10px;
+}
+.main .Focus {
+    float:left;
+    width: 721px;
+    height: 455px;
+    background-color: hotpink;
+}
+.Newflash {
+    float:right;
+    width: 250px;
+    height: 455px;
+}
+.newf {
+    height: 165px;
+    border:1px solid #000;
+}
+.new_hd {
+    height: 33px;
+    line-height: 33px;
+    border-bottom: 1px dotted #e4e4e4;
+    padding: 0 15px;
+}
+.new_hd h5 {
+    float:left;
+    font-size:14px;
+}
+.new_hd .more {
+    float:right;
+    font-size: 12px;
+}
+.new_hd .more::after {
+    content:"\e90b";
+    font-family: "icomoon";
+}
+.new_bd ul li{
+    height: 24px;
+    line-height: 24px;
+}
+
+.lifeservice {
+    height: 209px;
+    background-color: red;
+}
+
+.bargin {
+    margin-top: 5px;
+}
