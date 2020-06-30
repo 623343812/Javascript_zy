@@ -1,28 +1,30 @@
+.w
+ {width: 1200px;
+    margin: 0 auto;}
 .main {
     width: 980px;
     height: 455px;
-    margin-left: 220px;
+    margin-left: 380px;
     margin-top: 10px;
 }
 .main .Focus {
     float:left;
     width: 721px;
     height: 455px;
-    background-color: hotpink;
 }
 .Newflash {
     float:right;
     width: 250px;
     height: 455px;
 }
-.newf {
+.Newf {
     height: 165px;
     border:1px solid #000;
 }
 .new_hd {
     height: 33px;
     line-height: 33px;
-    border-bottom: 1px dotted #e4e4e4;
+    border-bottom: 1px dotted #000;
     padding: 0 15px;
 }
 .new_hd h5 {
@@ -37,16 +39,138 @@
     content:"\e90b";
     font-family: "icomoon";
 }
+.new_bd {
+    padding:5px 15px 0;
+}
 .new_bd ul li{
+    font-size: 14px;
     height: 24px;
     line-height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .lifeservice {
     height: 209px;
-    background-color: red;
+    /* background-color: red; */
+    border:1px solid #000;
+    border-top: 0;
+    overflow: hidden;
 }
-
+.lifeservice ul {
+    width: 252px;
+}
+.lifeservice ul li {
+    float:left;
+    width: 63px;
+    height: 71px;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    text-align: center;
+}
+.lifeservice ul li i {
+    display: inline-block;
+ width: 18px;
+ height: 25px;
+ background-color: greenyellow;
+ margin-top: 12px;
+}
 .bargin {
     margin-top: 5px;
 }
+/* 推荐模块 */
+.recom {
+    height: 164px;
+    margin-top: 12px;
+    background-color: #ebebeb;
+}
+.recom_hd {
+    float:left;
+}
+.recom_bd {
+    float:right;
+}
+.recom_bd ul li {
+    float:right;
+}
+.recom_bd ul li img {
+    width: 248px;
+    height: 163px;
+}
+.recom_bd ul li:nth-child(-n+3)::after {
+    content:"";
+    position:absolute;
+    right:0;
+    height: 145px;
+    width: 1px;
+    background-color: #ddd;
+}
+.floor .w {
+    margin-top: 30px;
+}
+.jiadian .box_hd {
+  
+    height: 30px;
+    border-bottom: 2px solid red;
+}
+.box_hd h5 {
+    float:left;
+    font-size: 18px;
+    color: #cc353e;
+    line-height: 30px;
+    font-weight: 400;
+}
+.tab_list {
+    float:right;
+    line-height: 30px;
+}
+.tab_list ul li {
+    float:left;
+    font-size: 12px; 
+}
+.tab_list ul li a {
+    padding: 0 15px;
+}
+.tab_list_item {
+    height: 361px;
+    margin-bottom: 20px;
+}
+.tab_list_item div {
+    float:left;
+    height: 361px;
+}
+.col_210 {
+    width: 210px;
+    background-color: #f9f9f9;
+}
+.col_210 ul li {
+    float:left;
+    width: 85px;
+    height: 34px;
+    border-bottom:1px solid #ccc;
+    text-align: center;
+    line-height: 33px;
+    margin-left:12px;
+}
+.col_210 ul {
+    height: 100px;
+
+}
+.col_329 {
+    width: 329px;
+
+}
+.col_221 {
+    width: 221px;
+    border-right: 1px solid #ccc;
+}
+.col_219 {
+    width: 219px;
+    border-left: -1px solid #ccc;
+}
+.bb {
+    display:block;
+    border-bottom: 1px solid #ccc;
+}
+

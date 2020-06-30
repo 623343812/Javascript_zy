@@ -1,0 +1,96 @@
+/* 列表页专有的css */
+.nav {
+    overflow: hidden;
+}
+.sk {
+    position: absolute;
+    border-left: 1px solid #b1191a;
+    left: 190px;
+    top: 40px;
+    padding: 3px 0 0 14px;
+}
+
+.sk_list {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.sk_list ul li {
+    float: left;
+    margin-left: 28px;
+    line-height: 47px;
+}
+
+.sk_list ul li a {
+    padding-right: 54px;
+}
+
+.sk_con {
+    font-size: 14px;
+    line-height: 51px;
+}
+
+.sk_con ul {
+    float: right;
+}
+
+.sk_con ul li {
+    float: left;
+    margin-right: 40px;
+}
+
+.sk_con ul li:last-child a::after {
+    content: "\e909";
+    font-family: 'icomoon';
+}
+
+.sk_content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.sk_bd {
+    width: 290px;
+    height: 460px;
+}
+
+.sk_bd ul {
+    margin-left: 13px;
+}
+
+.sk_bd ul .lie1 img {
+    padding: 25px 85px 23px 69px;
+}
+
+.sk_bd ul .lie2 {
+    line-height: 25px;
+}
+
+.sk_bd ul .lie3 span {
+    font-size: 23px;
+    font-weight: 700;
+    color: #e60012;
+    margin-right: 11px;
+}
+.sk_bd ul .lie4 .rate{
+    display: inline-block;
+    width: 133px;
+    height: 13px;
+    border-radius: 5px;
+    border:1px solid red;
+}
+.sk_bd ul .lie4 .rate1 {
+    width:87%;
+    height: 11px;
+    background-color: #ed282e;
+}
+.qg {
+    margin-top: 16px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    color:#fff;
+    width: 289px;
+    height: 50px;
+    background-color: #b1191a;
+}
