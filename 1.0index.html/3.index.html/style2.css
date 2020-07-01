@@ -1,0 +1,18 @@
+#star {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 80px solid red;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    margin: 150px auto;
+}
+#star::before {
+    content:'';
+    position: absolute;
+    border-top: 80px solid red;
+    border-right: 40px solid transparent;
+    border-left: 40px solid transparent;
+    top:20px;
+    left:-40px;
+}

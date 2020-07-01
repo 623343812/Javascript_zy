@@ -1,0 +1,24 @@
+.dialog{
+    background-color: #6a6;
+    margin:50px auto;
+    width:300px;
+    height:25px;
+    line-height: 25px;
+    padding:10px;
+    border-radius: 6px;
+    color:#fff;
+    position: relative;
+}
+.dialog::before{
+    content: '';
+    border-left:0px solid #f00;
+    border-top:10px solid transparent;
+    border-bottom:10px solid transparent;
+    border-right:10px solid #6a6;
+    position:absolute;
+    top:12px;
+    left:-10px;
+
+    
+
+}

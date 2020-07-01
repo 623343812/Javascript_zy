@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构伪类选择器</title>
+    <style type="text/css">
+    *{
+        padding: 0px;
+        margin: 0px;
+
+    }
+    .clearfix{
+        clear:both;
+        overflow:auto;
+    }
+    .demo{
+        border: 1px solid #ccc;
+        width:300px;
+        padding: 10px;
+        margin: 50px auto;
+    }
+    .demo li{
+        float:left;
+        list-style:none;
+        padding: 2px;
+        border: 1px solid #ccc;
+        margin-right: 4px;
+        width:20px;
+        height:20px;
+    }
+    .demo a{
+        display:block;
+        width: 20px;
+        height: 20px;
+        text-align:center;
+        border-radius:10px;
+        background-color: #f36;
+        text-decoration: none;
+    }
+    .demo li:empty{
+        background-color: #0f0;
+    }
+    </style>
+</head>
+<body>
+    <div class="demo clearfix">
+        <ul class="demo clearfix">
+            <p>0</p>
+            <li><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li><a href="">5</a></li>
+            <li><a href="">6</a></li>
+            <li><a href="">7</a></li>
+            <li><a href="">8</a></li>
+            <li><a href="">9</a></li>
+            <li><a href="">10</a></li>
+        </ul>
+
+    </div>
+    div class="demo clearfix">
+    <ul class="demo clearfix">
+        <li></li>
+        <li></li>
+        <li></li>
+
+        
+        
+        
+    </ul>
+    
+    </div>
+    
+</body>
+</html>

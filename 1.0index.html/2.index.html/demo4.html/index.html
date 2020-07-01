@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素</title>
+    <style>
+        .demo {
+            border: 3px solid #ccc;
+            width: 300px;
+            margin: 50px auto;
+            padding: 10px;
+        }
+    
+        .demo::first-letter {
+            font-size: 40px;
+            font-weight: bold;
+            float: left;
+        }
+    
+        .demo::first-line {
+            color: #f00;
+    
+        }
+    
+        .demo01 {
+            width: 600px;
+            border: 5px solid #ccc;
+            margin: 30px auto;
+            padding: 50px;
+            text-align: center;
+        }
+    
+        .demo01:after {
+            content: url(./2018.37.jpg);
+            display: block;
+        }
+    
+        .demo01::before {
+            content: url(./2018.37.jpg);
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo">
+        为元素before 和 after可以做的东西是相当惊人的。
+        我去饿我去恶趣味驱蚊器问问去问问。
+        轻微的温温柔柔分为氛围输入法的认为。
+        恶趣味大师傅但是trees的功夫。
+    </div>
+
+    <div class="demo01">
+        玩转CSS3新特性
+    </div>
+</body>
+</html>
