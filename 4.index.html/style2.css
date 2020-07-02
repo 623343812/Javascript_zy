@@ -1,0 +1,6 @@
+#egg {
+    width: 100px;
+    height: 200px;
+    background-color: orange;
+    border-radius:50% 50% 50% 50%/ 60% 60% 40% 40%;
+}

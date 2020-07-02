@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        if (false) 
+        alert("你猜我出来不？");
+             var a = 10;
+                if (a >= 10)
+                    alert('芜湖'); 
+        var age = 50;
+        if(age >= 60){
+            alert('你退休了'); 
+        }else {
+            alert('你还没退休');
+        }
+        var age = 50;
+                if (age > 100) {
+                    alert('活着挺没意思的');
+                } else if (age > 80) {
+                    alert('你也老大不小了');
+                } else if (age > 60) {
+                    alert('你该退休了');
+                } else if (age > 30) {
+                    alert('人到中年');
+                } else if (age > 17) {
+                    alert('你已经成年了');
+                } else {
+                    alert('你还未成年');
+                } 
+        var grade = prompt('小明的成绩是多少？');
+        if(grade >100 || grade <0 ||isNaN(grade)){
+            alert('拉出去毙了！');
+        }else{
+        if(grade == 100){
+            alert('奖励一台BMW');
+        }else if(grade >= 80){
+            alert('奖励一台iphone15s');
+        }else if(grade >= 60){
+            alert('奖励一本参考书');
+        }else{
+            alert('没有奖励');
+        }
+    }
+        var height = prompt('身高多少cm?');
+        var money = prompt('身价多少w？');
+        var shuai = prompt('颜值多少？');
+        if (height > 180 && money > 1000 && shuai > 500){
+            alert('我一定要嫁给他');
+        }else if (height > 180 || money > 1000 || shuai > 500){
+            alert('比上不足，比下有余。');
+        }else{
+            alert('不嫁！');
+        }
+        var num1 = +prompt('请输入第一个整数');
+        var num2 = +prompt('请输入第二个整数');
+        var num3 = +prompt('请输入第三个整数');
+        if(num1 >= num2){
+            if(num2 >= num3){
+                console.log(num3 ,num2 ,num1);
+            }else if (num2 <= num3){
+                if(num3 >= num1){
+                    console.log(num2,num1,num3);
+                }else{
+                    console.log(num2,num3,num1);
+                }
+            }
+        }else{
+            if(num2 >= num3){
+                console.log(num3,num1,num2);
+            }else if (num2 <= num3){
+                if(num3 >= num1){
+                    console.log(num1,num2,num3);
+                }else{
+                    console.log(num1,num3,num2);
+                }
+            }
+        }
+        console.log(typeof num1);
+        
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

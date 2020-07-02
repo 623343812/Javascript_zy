@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水仙花</title>
+    <script>
+        for(i = 100;i < 1000; i++){
+            // if([parseInt(i/100)]^3 + [parseInt((i%100)/10)]^3 + [(i%100)%10]^3 == i){
+            //     console.log(i);}
+  
+                var z = Math.trunc(i/100);
+                var y = Math.trunc((i%100)/10);
+                var g = (i%100)%10;
+                // console.log(z);
+                // console.log(y);
+                // console.log(g);
+                // var v = z*z*z + y*y*y + g*g*g;
+                // console.log(v);
+                
+                
+
+                if(z*z*z + y*y*y + g*g*g == i){
+                    console.log(i);
+                    
+                }
+
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

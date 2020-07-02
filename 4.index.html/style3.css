@@ -1,0 +1,39 @@
+*{
+    background-color: gray;
+}
+#taiji{
+    position: relative;
+    width: 100px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin: 150px auto;
+    border-left:100px solid black;
+}
+#taiji::before{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color:#ffffff;
+    border-top: 37.5px solid black;
+    border-right: 37.5px solid black;
+    border-bottom: 37.5px solid black;
+    border-left: 37.5px solid black;
+    border-radius: 50%;
+    left:-50px;
+}
+#taiji::after{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color:black;
+    border-top: 37.5px solid #ffffff;
+    border-right: 37.5px solid #ffffff;
+    border-bottom: 37.5px solid #ffffff;
+    border-left: 37.5px solid #ffffff;
+    border-radius: 50%;
+    left:-50px;
+    top:100px;
+}
