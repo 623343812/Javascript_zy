@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本和引用数据类型</title>
+    <script>
+        var a = 123;
+        var b = a;
+        a++;
+
+        // console.log("a =" + a);
+        // console.log("b =" + b);
+        var obj = new Object();
+        obj.name = "孙悟空";
+
+        var obj2 = obj;
+        //修改obj的属性
+        obj.name = "猪八戒";
+
+        // console.log(obj.name);
+        // console.log(obj2.name);
+        obj2 = null;
+
+        // console.log(obj);
+        // console.log(obj2);
+        var c = 10;
+        var d = 10;
+        // console.log(c == d);
+        var obj3 = new Object();
+        var obj4 = new Object();
+        obj3.name = "沙和尚";
+        obj4.name = "沙和尚";
+        console.log(obj3.name == obj4.name);
+        console.log(obj3 == obj4);
+        
+        
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

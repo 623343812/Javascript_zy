@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特殊属性名</title>
+    <script>
+        var obj = new Object();
+        // obj["123"] = 789;
+        // obj["nihao"] = "你好";
+        // var n = "123";     
+        // console.log(obj[n]);
+        obj.name = "孙悟空";
+        var obj2 = new Object();
+        obj2.age = "18";
+        obj.text = obj2;
+        console.log(obj.text.age);        
+        console.log("age" in obj);
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
