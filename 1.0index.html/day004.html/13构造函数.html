@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>构造函数</title>
+    <script>
+        function Person(name,age,gender){
+this.name = name;
+this.age = age;
+this.gender = gender;
+this.sayName = function(){
+    alert(this.name);
+}; 
+        }
+        var per = new Person();
+        console.log(per);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象</title>
+    <script>
+        // var obj = {
+        //     name: "孙悟空",
+        //     age: 18,
+        //     address: "花果山",
+        //     sayName:function(){
+        //         alert(this.name);
+        //     }
+        // };
+
+        function creatPeason(name,age,gender){
+            var obj = new Object();
+            obj.name = name;
+            obj.age= age;
+            obj.address= gender;
+            obj.sayName=function(){
+                alert(this.name);
+            };
+return obj;
+        }
+        var obj2 = creatPeason("猪八戒",28,"g");
+        var obj3 = creatPeason();
+        var obj4 = creatPeason();
+        console.log(obj2);
+        console.log(obj3);
+        console.log(obj4);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

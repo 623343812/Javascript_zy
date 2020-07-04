@@ -1,0 +1,14 @@
+.ceng{
+    width: 100px;
+    height: 100px;
+    border:1px solid black;
+    border-radius: 50%;
+    margin:10px;
+    float:left;
+}
+.circle{
+    background-image: radial-gradient( 20px circle at center, red , greenyellow,green);
+}
+.ellipse{
+    background-image: radial-gradient(20px 30px ellipse at center, red ,greenyellow,green);
+}

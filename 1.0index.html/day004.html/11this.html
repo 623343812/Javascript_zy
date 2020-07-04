@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+    <script>
+        function fun(a,b){
+            console.log(this.name);
+            
+        }
+        // fun();
+        var obj={
+            name:"孙悟空",
+            sayName:fun
+        };
+        var obj2={
+            name:"沙和尚",
+            sayName:fun
+        };
+        // console.log(obj.sayName.fun== fun());
+        // obj.sayName();
+var name = "爱上你，是我做过最简单的事";
+
+        // fun();
+        obj.sayName();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

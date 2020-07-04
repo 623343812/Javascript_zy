@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变量的全局声明</title>
+    <script>
+       
+       
+        console.log("a ="+a);
+         var a = 123;
+        fun();
+        
+        function fun(){
+            console.log("我是一个fun函数");
+            
+        }
+        var fun2 = function(){
+            console.log("我是fun2函数");
+            
+        }; 
+        fun2();
+        // 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

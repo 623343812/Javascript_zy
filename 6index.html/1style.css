@@ -1,0 +1,6 @@
+.ceng {
+    width: 260px;
+    height: 200px;
+    border:1px solid black;
+    background-image: linear-gradient(0deg, red 50%,greenyellow 100%);
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原型</title>
+    <script>
+        /* 
+        原型prototype
+        我们每创建一个函数，解析器都会向函数中添加一个属性prototype
+        
+         */
+         function Person(){
+
+         }
+         function MyClass(){
+
+         }
+        //  console.log(Person.prototype);
+        var mc = new MyClass();
+
+        var mc2 = new MyClass();
+
+        console.log(mc2.__proto__ == MyClass.prototype);
+        
+
+        Person.prototype.sayName = function(){
+            alert("Hello大家好，我是："+this.name);
+        }
+
+         
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

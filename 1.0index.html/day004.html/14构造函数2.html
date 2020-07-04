@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>构造函数2</title>
+    <script>
+        function Person(name, age, gender){
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            // 相对向中添加一个方法
+
+            }
+            Person.prototype.sayName = function(){
+                alert("Hello大家好，我是"+this.name);
+        }
+        var per =new Person("小明", 15, "女");
+        var per2 =new Person("小四", 16, "男");
+        per.sayName();
+        per2.sayName();
+        // console.log(per.sayName == per2.sayName);
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

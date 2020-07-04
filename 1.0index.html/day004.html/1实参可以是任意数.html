@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实参可以是任意数</title>
+    <script>
+        function isOu(num){
+        return num%2 == 0;
+        }
+        var result = isOu(3);
+        console.log(result);
+        
+        function mianji(r){
+            return 3.14*r*r;
+        }
+        result = mianji(10)
+        console.log("result = "+ result);
+        function sayHello(name, age, gender, address){
+            console.log("我是"+name+",今年我"+age+"岁了"+"。是个"+gender+"人"+",住在是"+address+"。");
+            
+        }
+        sayHello("张三", 18,"男", "中国江西");
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
