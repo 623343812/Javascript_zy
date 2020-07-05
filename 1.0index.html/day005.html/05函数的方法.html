@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // function fun(){
+        //     alert(this);
+        // }
+        // var obj={};
+        // fun.apply(obj);
+        // fun();
+
+        function fun(){
+        // console.log(Array.isArray(arguments));
+        // console.log(arguments[0]);
+        console.log(arguments.callee == fun);
+        
+        
+        }
+        fun("撒旦·",true);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
