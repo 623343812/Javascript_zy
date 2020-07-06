@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var reg = /\\/;
+
+        // console.log(reg.test("abcbcd\\"));
+        reg = new RegExp("\.");
+        // console.log(reg.test("basd"));
+        // console.log(reg);
+
+        reg = /\S/;
+        // console.log(reg.test("  "))
+        reg = /\Bchild\B/;
+
+        // console.log(reg.test("hellochild1"));
+
+        var str = prompt("请输入你的用户名：");
+        // console.log(str);
+
+        str = str.replace(/^\s*|\s*$/g,"");
+        console.log(str);
+        
+                                  
+        
+        
+        
+        
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

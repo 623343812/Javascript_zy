@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正则表达式</title>
+    <script>
+        // var reg = new RegExp("a");
+        // console.log(typeof reg);
+
+        // var str = "Adsd";
+
+        // var result = reg.test(str);
+        // console.log(reg.test("asd","i"));
+
+
+        // var reg = new RegExp("a","i");
+
+        // reg = /a/i;
+        // console.log(reg.test("abc"));
+
+        var str = "11a2b3c4d5e6f";
+
+        var result = str.split(/[A-z]/);
+        console.log(result);
+        str = "hello  hello aec afc";
+        result = str.search(/a[bef]c/);
+        // console.log(result);*
+         var str = "11a2b3aa4aAA5e6f7D8F9G";
+        result = str.match(/[A-z]/gi);
+        // console.log(result[2]);
+
+        result = str.replace(/a/gi,"");
+        // console.log(result);
+        
+        
+
+        
+        
+        
+         
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

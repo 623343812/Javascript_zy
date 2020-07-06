@@ -1,0 +1,19 @@
+.font{
+    margin: 30px auto;
+    width: 100px;
+    padding:10px;
+    border:1px solid #ccc;
+    height:50px;
+    text-overflow:clip;
+    overflow:hidden;
+}
+.font2{
+    margin: 0px auto;
+    width: 100px;
+    padding:10px;
+    border:1px solid #ccc;
+    height:50px;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space: nowrap;
+}

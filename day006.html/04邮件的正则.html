@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>邮件的正则</title>
+    <script>
+        /* 
+        任意的字母数字下划线 /、w/ 
+        @    任意字母和数字
+        .  任意字母（2-5位）
+        .  任意字母（2-5位）
+        
+        、w{3,} (\.\w+)* @ [A-z0-9]+ (\.[A-z]{2,5}){1,2}
+         */
+
+         var emailReg = /^\w{3,}(\.\w+)*@[A-z0-9]+(\.[A-z]{2,5}){1,2}$/;
+         console.log(emailReg.test("wqew623343812@qq.com"));
+         
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
