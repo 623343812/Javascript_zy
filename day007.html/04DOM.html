@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 400px;
+            height: 400px;
+            position:relative;
+            background-color: greenyellow;
+        }
+        #animate{
+            width: 70px;
+            height: 70px;
+            position:absolute;
+            background-color: red;
+        }
+    </style>
+    <script>
+       
+            function myMove(){
+            var elem = document.getElementById("animate");
+            var pos = 0;
+            var id = setInterval(frame,1);
+            function frame(){
+                if(pos == 330){
+                    clearInterval(id);
+                }else{
+                    pos++;
+                    elem.style.top = pos +"px";
+                    elem.style.left = pos +"px";
+                }
+            }
+            }
+        
+    </script>
+</head>
+<body>
+    <button type="button" onclick="myMove()" value="单击我">单击我</button>
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+</body>
+</html>

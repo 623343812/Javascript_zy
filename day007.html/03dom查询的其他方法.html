@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            // var body = document.getElementsByTagName("body")[0];
+            var body = document.body;
+
+            var html = document.documentElement;
+            // console.log(body);
+
+            var all = document.all;
+            // console.log(typeof all);
+
+             for(var i = 0; i <all.length; i++){
+                //  console.log(all[i]);
+                 
+                 
+             }
+
+all = document.getElementsByTagName("*");
+// console.log(all);
+
+var box1 = document.getElementsByClassName("box1");
+// console.log(box1.length);
+
+var div = document.getElementsByTagName("div");
+// console.log(div);
+
+// document.querySelector();
+var div = document.querySelector(".box1 div");
+// console.log(div.innerHTML);
+var box1 = document.querySelector(".box1");
+// console.log(box1);
+var box1 = document.querySelectorAll(".box1");
+console.log(box1);
+
+
+
+            
+            
+        }
+    </script>
+</head>
+<body>
+    <div class="box1">
+        <div>我是</div>
+    </div>
+    <div class="box1">
+        <div>我是</div>
+    </div>
+    <div class="box1">
+        <div>我是</div>
+    </div>
+    <div></div>
+</body>
+</html>
