@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM增删改</title>
+    <script>
+        window.onload = function () {
+
+
+            myClick("btn01", function () {
+                var li = document.createElement("li");
+                // alert(li);
+                var diwuText = document.createTextNode("第五");
+                li.appendChild(diwuText);
+                li.innerHTML = "第五";
+                // alert(diwuText);
+                var city = document.getElementById("city");
+                city.appendChild(li);
+            });
+         
+        };
+        function myClick(idStr,fun){
+                var btn = document.getElementById("idStr");
+                btn.onclick = fun;
+            }
+    </script>
+</head>
+
+<body>
+    <div id="chengshi">
+        <ul class="city">
+            <li>第1</li>
+            <li>第2</li>
+            <li>第3</li>
+            <li>第4</li>
+        </ul>
+    </div>
+    <div id="btnList">
+        <button id="btn01">点我一下</button>
+    </div>
+</body>
+
+</html>
