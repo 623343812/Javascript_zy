@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>m冒泡</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: greenyellow;
+        }
+
+        #s1 {
+            background-color: hotpink;
+        }
+
+        #s1:hover,
+        #box:hover {
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+
+            //事件的冒泡(Bubble)
+            //事件向上传导
+            //可以通过事件取消冒泡
+            var s1 = document.getElementById("s1");
+            s1.onclick = function (event) {
+                event = event || window.event;
+                // alert("span芜湖");
+                // event.cancelBubble = true;
+            };
+            var box = document.getElementById("box");
+            box.onclick = function (event) {
+                event = event || window.event;
+                // alert('芜湖box');
+                // event.cancelBubble = true;
+            };
+            document.body.onclick = function () {
+                alert("body芜湖");
+            };
+
+
+            
+        };
+    </script>
+</head>
+
+<body>
+    <div id="box">
+        我是box1
+        <span id="s1">我是span</span>
+    </div>
+</body>
+
+</html>

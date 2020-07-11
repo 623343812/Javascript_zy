@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拖拽</title>
+    <style>
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position:absolute;
+            cursor: pointer;
+        }
+        #box2 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            cursor: pointer;
+            position:absolute;
+            left:200px;
+            top: 200px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            /* 
+            拖拽流程
+              1当鼠标在元素下按下的时候开始拖拽      onmousedown
+              2当鼠标移动的时候开始移动              onmousemove
+              3当鼠标松开时 被拖拽元素固定在该位置   onmouseup
+            
+             */
+             var box1 = document.getElementById("box1");
+             box1.onmousedown = function(){
+
+                // 2当鼠标移动的时候开始移动              onmousemove
+             document.onmousemove = function(event){
+                 event = event || window.event;
+
+                 var left = event.clientX;
+                 var top = event.clientY;
+                 //修改box1的位置
+                 box1.style.left = left + "px";
+                 box1.style.top = top + "px";
+             };
+
+             //当鼠标松开时 被拖拽元素固定在该位置   onmouseup
+             //鼠标松开事件
+             document.onmouseup = function(){
+                 //取消document的onmousemove事件
+                 document.onmousemove = null;
+                 document.onmouseup = null;
+                alert("松开");
+             };
+             };
+
+
+
+
+        };
+    </script>
+</head>
+
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+</body>
+
+</html>

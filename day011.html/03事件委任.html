@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件委任</title>
+    <script>
+        window.onload = function(){
+            var u1 = document.getElementById("ul");
+
+            //点击按钮后获得超链接
+            var btn01 = document.getElementById("btn01");
+            btn01.onclick = function(){
+                // 创建一个li
+                var li = document.createElement("li");
+                li.innerHTML = "<a href = '#' class='link'>新建的超链接</a>"
+                u1.appendChild(li);
+                
+            };
+            //为每一个超链接都绑定一个单击响应函数 有点麻烦
+
+            var allA = document.getElementsByTagName("a");
+            // for(var i = 0; i<allA.length; i++){
+            //     allA[i].onclick = function(){
+            //         alert("bingo");
+            //     };
+            // }
+            //绑定一次事件，即可应用到多个元素上
+            /* 
+            尝试将其绑定给共同的祖先元素
+
+            为ul绑定一个单击响应函数
+             */
+            //  var Li = document.getElementById("Li");
+             u1.onclick = function(event){
+
+                 event = event || window.event;
+                 if(event.target.className == "link"){
+                     alert("再次芜湖");                 }
+                //  alert("芜湖");
+                // alert(this);
+             };
+        };
+    </script>
+</head>
+<body>
+
+    <button id="btn01">点我一下</button>
+    <ul id="ul">
+        <li><p>我是p</p></li>
+        <li><a href="#" class="link">超链接</a></li>
+        <li><a href="#" class="link">超链接</a></li>
+        <li><a href="#" class="link">超链接</a></li>
+    </ul>
+</body>
+</html>
