@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // console.log(navigator); 浏览器的信息
+        // console.log(location); 地址栏信息
+        // console.log(history);历史信息
+        // console.log(screen);屏幕信息
+
+        /* Navigator
+          -由于历史原因，Navigator对象中的大部分属性已经不能帮助我们识别浏览器了
+          -使用userAgent来判断浏览器信息 不同的浏览器会有不同的userAgent
+          Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36
+        
+        
+        
+         */
+
+        // alert(navigator.userAgent);
+        var bro = navigator.userAgent;
+        console.log(bro);
+        if(/chrome/i.test(bro)){
+            alert("谷歌出来吧！");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滚轮事件 </title>
+    <style>
+        #box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            //当鼠标滚轮向下滚动，box1变长
+            //当滚轮向上滚动时 box1变短
+
+            //获取box1
+            var box1 = document.getElementById("box1");
+
+            //绑定鼠标滚轮事件
+            /* 
+            onmousewheel火狐中不支持
+            在狐火中需要用DOMMouseScroll
+             */
+
+             /* 
+             wheelDelta不看大小，看正负
+             火狐中也不支持  用detail获取
+              */
+             box1.onmousewheel = function(event){
+                 event = event || window.event;
+                //  alert(event.wheelDelta);
+                if(event.wheelDelta > 0 || event.detail < 0){
+                    // alert("向上"); 变短
+                    box1.style.height = box1.clientHeight - 10 + "px";
+                }else{
+                    // alert("向下"); 变长
+                    box1.style.height = box1.clientHeight + 10 + "px";
+                }
+                /* 
+                当滚轮滚动时 如果浏览器有滚动条 滚动条会随之滚动
+                这是浏览器的默认行为 如果不希望发生 可以取消默认行为
+                
+                 */
+                 return false;
+             };
+
+        };
+    </script>
+</head>
+<body style="height:2000px">
+    <div id="box1"></div>
+</body>
+</html>

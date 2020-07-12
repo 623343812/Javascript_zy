@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试ie8</title>
+    <script>
+        window.onload = function(){
+            var btn01 = document.getElementById("btn01");
+            var btn02 = document.getElementById("btn02");
+
+            btn01.onclick = function(){
+                alert(1);
+
+            };
+            btn02.onclick = function(){
+                alert(2);
+
+            };
+            //设置btn01对鼠标按下相关事件进行捕获
+            btn01.setCapture();
+
+        };
+    </script>
+</head>
+<body>
+    <button id="btn01">点我倚西楼</button>
+    <button id="btn02">我也要</button>
+</body>
+</html>
