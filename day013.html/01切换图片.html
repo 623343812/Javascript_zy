@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>切换图片</title>
+    <script>
+        window.onload = function(){
+
+            /* 
+            是图片自动切换
+             */
+            var img1 = document.getElementById("img1");
+            //创建一个数组保存图片
+            var imgArr = ["../images/p1781534163.webp", "../images/p2461578163.webp", "../images/p2461578232.webp", "../images/p782735144.webp"];
+            //创建一个索引保存图片
+            var index = 0;
+            var timer;
+
+            //为button绑定一个单击响应函数
+            var btn01 = document.getElementById("btn01");
+            btn01.onclick = function(){
+                /* 
+                每点击一次按钮 就会开启一个定时器
+                点击多次会开启多个定时器
+                只能关闭最后一个定时器
+                
+                 */
+                 //在开启定时器之前 需要将上一个定时器关闭
+                 clearInterval(timer);
+        /* 
+            开启定时器，来自动切换图片
+             */
+            timer =  setInterval(function(){
+                 //使索引自增
+                 index++;
+                //  if(index >= imgArr.length){
+                //      //则将index设置为0;
+                //      index = 0;
+                //  }
+                index %= imgArr.length;
+                 img1.src = imgArr[index];
+             },1000);
+
+            //  return false;
+            };
+            var btn02 = document.getElementById("btn02");
+            btn02.onclick = function(){
+                /* 
+                clearInterval可以接受任意参数
+                如果参数是一个有效的定时器标识 则停止对应的定时器
+                如果参数不是有效的表示 则什么也不做
+                
+                 */
+                clearInterval(timer);
+            };
+    
+        };
+    </script>
+</head>
+<body>
+    <img src="../images/p1781534163.webp"  id="img1" alt="">
+    <button id="btn01">开始</button>
+    <button id="btn02">停止</button>
+</body>
+</html>

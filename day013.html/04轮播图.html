@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 设置outer样式*/
+        #outer {
+            /* 设置宽和高*/
+            width: 200px;
+            height: 180px;
+            margin: 50px auto;
+            background-color: greenyellow;
+            padding: 10px 0;
+            position: relative;
+            /* 裁剪溢出的部分 */
+            overflow: hidden;
+        }
+
+        #imgList {
+            list-style: none;
+            /* 设置ul的宽度*/
+            /* width: 1000px; */
+            position: absolute;
+            /* 每向左移动200px 就会显示到下一张图片*/
+            left: -200px;
+
+        }
+
+        /* 设置图片中的li */
+        #imgList li {
+            float: left;
+            /* 设置左右外边距 */
+            margin: 0 10px;
+        }
+
+        /* 设置导航按钮  他是上边的兄弟元素 所以可以在上面显示*/
+        #navDiv {
+            position: absolute;
+            /* 设置位置 */
+            bottom: 15px;
+            /* left距离=(父元素width-自身width)/2 */
+            /* left:50px; */
+        }
+
+        #navDiv a {
+            /* 设置超链接浮动 行内元素不能设置宽高 */
+            float: left;
+            /* 设置宽高 */
+            width: 10px;
+            height: 10px;
+            /* 设置背景颜色 */
+            background-color: red;
+            /* 左右外边距 */
+            margin: 0 5px;
+            /* 设置透明 */
+            opacity: 0.5;
+            /* 兼容IE8 */
+            filter: alpha(opacity=50);
+        }
+        /* 设置鼠标移入的效果 */
+        #navDiv a:hover{
+            background-color: black;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+
+            //获取imgList
+            var imgList = document.getElementById("imgList");
+            //获取页面中所有的img标签
+            var imgArr = document.getElementsByTagName("img");
+            //设置imgList的宽度
+            imgList.style.width = 200 * imgArr.length + "px";
+
+            /* 设置导航按钮居中 */
+            //获取navDiv
+            var navDiv = document.getElementById("navDiv");
+            //获取outer的width
+            var outer = document.getElementById("outer");
+            // 设置navDiv的left值
+            navDiv.style.left = (outer.offsetWidth - navDiv.offsetWidth)/2 + "px";
+
+            // 默认显示图片的索引
+            var index = 0;
+
+            // 获取所有的a
+            var allA = document.getElementsByTagName("a");
+
+            //设置默认选中的效果
+            allA[index].style.backgroundColor = "black";
+
+            /* 
+            点击超链接切换到指定的图片 一一相对应
+            */
+
+            //给所有的链接绑定单击响应函数 遍历
+            for(var i = 0; i < allA.length; i++){
+                //为每一个超链接都添加一个num属性
+                allA[i].num = i;//
+
+                //为超链接绑定单击响应函数
+                allA[i].onclick = function(){
+                    
+                    //先执行for循环 再执行单击响应函数
+                    //alert(i); i = 5;
+
+                    //获取点击超链接的索引   将其设置为index
+                    index = this.num;
+
+                    //切换图片
+                    /* 
+                    第一张 0 0
+                    第二张 1 -180
+                    第三张 2 -360
+                    */
+                    imgList.style.left = -200*index + "px";
+                };
+            }
+            //创建一个方法来设置选中的a
+            function setA(){
+
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <!-- 创建一个外部的div，来作为大的容器 -->
+    <div id="outer">
+        <!-- 创建一个ul，用于放置图片 -->
+        <ul id="imgList">
+            <li>
+                <img src="/images/01d.webp" alt="">
+            </li>
+            <li>
+                <img src="/images/02d.webp" alt="">
+            </li>
+            <li>
+                <img src="/images/03d.webp" alt="">
+            </li>
+            <li>
+                <img src="/images/04d.webp" alt="">
+            </li>
+            <li>
+                <img src="/images/05d.webp" alt="">
+            </li>
+        </ul>
+        <!-- 创建导航栏 轮播图下面的小点 -->
+        <div id="navDiv">
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+    </div>
+</body>
+
+</html>

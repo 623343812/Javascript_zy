@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>延时调用</title>
+    <script>
+        //开启一个定时器
+        var num = 1;
+        // setInterval(function(){
+        //     console.log(num++);
+        // },3000);
+        //延时调用 隔一段时间在执行 而且只会执行一次
+        //延时调用和定时调用实际上是可以互相代替的
+        var timer = setTimeout(function(){
+            console.log(num++);
+        },3000);
+
+        clearTimeout(timer);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
