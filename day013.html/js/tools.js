@@ -54,3 +54,57 @@
                         return obj.currentStyle[name];
                     }
                 }
+
+                //定义一个函数 用来象一个元素添加指定的class属性值
+        /* 
+        参数：obj
+          要添加的class属性的元素
+          cn 要添加的class值
+        */
+        function addClass(obj,cn){
+            if(!hasClass(obj, cn)){
+                obj.className += " " +cn;
+            }
+           //点击按钮 会一直添加cn
+        }
+        //检查obj中是否含有cn
+
+        /* 
+        判断一个元素中是否含有指定的class属性值
+        有返回true 没有则返回false
+        */
+        function hasClass(obj, cn){
+            //判断obj中有没有cn class
+            //创建一个正则表达式 来判断
+            // var reg = /\bb2\b/;  写死了 没有操作性
+            //创建一个构造函数保存
+            var reg = new RegExp("\\b" +cn +"\\b");
+            // alert(reg);
+            return reg.test(obj.className);//没有返回值 就会是未定义
+        }
+        /* 
+        删除一个元素中指定的class属性
+        */
+
+        function removeClass(obj, cn){
+            //创建一个正则表达式
+            var reg = new RegExp("\\b" +cn +"\\b");
+            //删除class
+            obj.className = obj.className.replace(reg, "");//用空串替换reg
+        }
+        /* 
+        toggleClass可以用来切换一个类
+        如果元素中具有该类，则删除
+        如果元素中没有该类，则增加
+        
+        */
+
+        function toggleClass(obj,cn){
+            //判断obj中是否含有cn
+            if(hasClass(obj, cn)){
+                //有，删除
+                removeClass(obj, cn);
+            }else{
+                addClass(obj, cn);
+            }
+        }

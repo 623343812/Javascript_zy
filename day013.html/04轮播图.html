@@ -30,7 +30,7 @@
             /* width: 1000px; */
             position: absolute;
             /* 每向左移动200px 就会显示到下一张图片*/
-            left: -200px;
+            left: 0;
 
         }
 
@@ -70,6 +70,8 @@
             background-color: black;
         }
     </style>
+    <!-- 引入工具 -->
+    <script type = "text/javaScript" src="/day013.html/js/tools.js"></script>
 
     <script>
         window.onload = function () {
@@ -79,7 +81,7 @@
             //获取页面中所有的img标签
             var imgArr = document.getElementsByTagName("img");
             //设置imgList的宽度
-            imgList.style.width = 200 * imgArr.length + "px";
+            imgList.style.width = 200*imgArr.length + "px";
 
             /* 设置导航按钮居中 */
             //获取navDiv
@@ -109,9 +111,11 @@
 
                 //为超链接绑定单击响应函数
                 allA[i].onclick = function(){
-                    
+                    //点的时候关闭自动切换定时器
+                    clearInterval(timer);
                     //先执行for循环 再执行单击响应函数
                     //alert(i); i = 5;
+                    
 
                     //获取点击超链接的索引   将其设置为index
                     index = this.num;
@@ -122,13 +126,58 @@
                     第二张 1 -180
                     第三张 2 -360
                     */
-                    imgList.style.left = -200*index + "px";
+                    // imgList.style.left = -200*index + "px";
+                    //设置选中的a
+                    setA();
+
+                    //使用move函数来切换图片
+                    move(imgList, "left", -200*index, 20, function(){
+                        //动画执行完毕 开启自动定时器
+                        autoChange();
+                    });
                 };
             }
+            //开启自动切换图片
+            autoChange();
+
             //创建一个方法来设置选中的a
             function setA(){
+                //判断当前索引是否是最后一张图片
+                if(index >= imgArr.length - 1){
+                    //则将index设置为0
+                    index = 0;
+                    //此时显示的最后一张图片 而最后一张图片和第一张一摸一样
+                    //通过CSS将最后一张切换成第一张
+                    imgList.style.left = 0;
+                }
+                //遍历所有的a 并将它们得分背景颜色设置为红色
+                for(var i = 0; i<allA.length; i++){
+                    allA[i].style.backgroundColor = "";
+                }
+                //将选中的a设置为黑色
+                allA[index].style.backgroundColor = "black";
 
             };
+            //定义一个自动切换的定时器标识
+            var timer;
+            //创建一个函数 用来开启自动切换图片
+            function autoChange(){
+
+                //开启一个定时器 用来定时去切换图片
+                timer = setInterval(function(){
+                    //使索引自增
+                    index++;
+                    //判断index的值
+                    index %= imgArr.length;
+                    //执行动画 切换图片
+                    move(imgList, "left", -200*index, 20, function(){
+                        //修改导航按钮
+                        setA();
+                    });
+
+                },3000);
+
+            }
         };
     </script>
 </head>
@@ -152,6 +201,9 @@
             </li>
             <li>
                 <img src="/images/05d.webp" alt="">
+            </li>
+            <li>
+                <img src="/images/01d.webp" alt="">
             </li>
         </ul>
         <!-- 创建导航栏 轮播图下面的小点 -->
