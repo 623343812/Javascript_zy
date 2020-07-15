@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内存管理</title>
+</head>
+<body>
+    <!-- 
+        wenti：JS引擎如何管理内存
+        1.内存生命周期
+         * 分配小内存空间 得到它的使用权
+         *储存数据 可以反复进行操作
+         *释放当前的小内存空间
+        2.释放内存
+         *局部变量：函数执行完自动释放
+         *对象：成为垃圾变量 再由垃圾回收器回收   全局变量不会释放
+     -->
+     <script>
+        //  var a = 3;
+        //  var obj = {};
+         //里面有三个小内存空间 a obj {}
+
+
+        // var a = 3;
+        // var obj = {};
+        // obj = null;//上面的obj被回收  只有两个变量
+
+        //释放和垃圾回收是两个概念 垃圾回收需要垃圾收集器 释放一般形容函数内的局部变量
+
+        function fn(){
+            var b = {};//调用函数时才会生效
+        }
+        fn();//执行完fn()后 b的空间会自动释放，b所指向的对象会在后面的某个时刻由垃圾回收器回收
+     </script>
+</body>
+</html>
