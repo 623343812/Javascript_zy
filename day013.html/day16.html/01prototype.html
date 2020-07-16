@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原型和原型链</title>
+</head>
+<body>
+    <script>
+        console.log(Date.prototype);
+        function fun(){
+
+        }
+        fun.prototype.test = function(){
+            // console.log('test()');
+        }
+        // console.log(fun.prototype);
+
+        console.log(Date.prototype.constructor === Date);
+        console.log(fun.prototype.constructor === fun);
+
+        fun.prototype.test = function(){
+            console.log('test()');
+        }
+        
+    </script>
+</body>
+</html>
