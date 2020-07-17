@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>面试题2</title>
+</head>
+
+<body>
+    <script>
+        // 测试题1：先执行变量提升 再执行函数提升
+        function a() {};
+        var a;
+        // console.log(typeof a);//function
+
+        //测试题2
+        if(!(b in window)){//b in window 为true
+            var b = 1;
+        };
+        // console.log(b);//undefined
+
+        //测试题3 
+        var c = 1;
+        function c(c){
+            console.log(c);
+        };
+        c(2);//报错
+    </script>
+</body>
+
+</html>

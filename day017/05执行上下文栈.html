@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>执行上下文栈</title>
+</head>
+<body>
+    <script>
+        var a = 10;
+        var bar = function(x){
+            var b = 5;
+            foo(x+b);
+        };
+        var foo = function(y){
+            var c = 5;
+            console.log(a + c + y);
+        };
+        bar(10);
+    </script>
+</body>
+</html>

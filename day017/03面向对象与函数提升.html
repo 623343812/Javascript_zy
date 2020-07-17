@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>面向对象与函数提升</title>
+</head>
+<body>
+    <script>
+        var a = 3;
+        function fn(){
+            console.log(a);
+            var a=4;//undefined
+        }
+        fn();
+        console.log(b);//undefined
+        var b = 3;
+        fn2()//可以调用 函数提升
+        function fn2(){
+            console.log('fn2()');
+        }
+    </script>
+</body>
+</html>
