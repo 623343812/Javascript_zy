@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="./layout.css">
+    <script src="/day001/showPic.js"></script>
+<body>
+    <h1>Photos</h1>
+    <ul>
+        <li><a href="/images/01d.webp" title="A firework display" onclick = "showPic(this); return false;">Firework</a></li>
+        <li><a href="/images/02d.webp" title="A cup of black coffee" onclick = "showPic(this); return false;">Coffee</a></li>
+        <li><a href="/images/03d.webp" title="A red, red rose" onclick = "showPic(this); return false;">Rose</a></li>
+        <li><a href="/images/04d.webp" title="The famous clock" onclick = "showPic(this); return false;">Big ben</a></li>
+    </ul>
+    <img id= "placeholder" src="#" alt="my image gallery" >
+    <p id="description">Choose an image.</p>
+</body>
+</html>
