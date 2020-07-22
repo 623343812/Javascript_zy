@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Person(name,age){//在构造函数中值初始化一般函数
+            this.name = name;
+            this.age = age;
+        }
+        Person.prototype.setName = function(name){
+            this.name = name;
+        };
+        var p1 = new Person('Ton',23);
+        var p2 = new Person('Tom',24);
+        console.log(p1,p2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

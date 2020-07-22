@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Supper(){
+            //父类型
+            this.supProp = 'Supper property';
+        }
+        Supper.prototype.showSupperProp = function(){
+            console.log(this.supProp);
+        }
+        //子类型
+        function Sub(){
+            this.subProp = 'Sub property';
+        }
+        //子类型的原型为父类行的实例对象
+        Sub.prototype = new Supper();
+        //让子类型的原型constructor指向子类型
+        Sub.prototype.constructor = Sub;
+        Sub.prototype.showSubProp = function(){
+            console.log(this.subProp);
+        }
+        var sub = new Sub();
+        console.log(sub);
+    </script>
+</head>
+<body>
+</body>
+</html>

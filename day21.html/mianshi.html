@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var name = 'The Window';
+        var object = {
+            name:'My Object',
+            getNameFunc:function(){
+                return function(){
+                    return this.name;//函数里面的this是window
+                };//没有闭包 没有调用外部函数的变量（外部函数没有变量）
+            }
+        };
+        // alert(object.getNameFunc()());
+
+        var name2 = 'The Window';
+        var object2 = {
+            name2:'My Object',
+            getNameFunc:function(){
+                var that = this;
+                return function(){
+                    return that.name2;
+                };
+            }
+        };
+        alert(object2.getNameFunc()()); //my object
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
