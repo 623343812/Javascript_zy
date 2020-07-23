@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        setTimeout(function(){
+            console.log('time 2222');
+            alert('22222222222');
+        },2000);
+        setTimeout(function(){
+            console.log('timeout 1111');
+            alert('11111111111111');
+        },1000);
+        setTimeout(function(){
+            console.log('timeout 0000');
+            
+        },0);
+        function fn(){
+            console.log('fn()');
+        }
+        fn();
+        console.log('alert()之前');
+        alert('------');//暂停当前主线程的执行，同时暂停了计时，点击确定后恢复程序执行和计时
+        console.log('alert()之后');
+    </script>
+</body>
+</html>
