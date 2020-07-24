@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变量的解构赋值</title>
+</head>
+<body>
+    <script>
+        // const F4 = ['小沈阳','刘能','赵四','宋小宝'];
+        // let [xiao, liu, zhao, song] = F4;
+        // console.log(xiao);
+        // console.log(zhao);
+        // console.log(liu);
+        // console.log(song);
+
+        const zhao = {
+            name: '赵本山',
+            age: '不详',
+            xiaopin: function(){
+                console.log('我可以演小品');
+            }
+        };
+
+        let {name,age,xiaopin} = zhao;
+        console.log(name);
+        console.log(age);
+        console.log(xiaopin);
+
+        xiaopin();
+    </script>
+</body>
+</html>
