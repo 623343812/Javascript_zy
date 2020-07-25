@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭头函数的实践</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="ad"></div>
+    <script>
+        //需求一 点击div 2s后颜色变为 粉色
+        let ad = document.getElementById('ad');
+        ad.addEventListener('click',function(){
+            //保存this值
+            // let _this = this;
+            setTimeout(() => {
+                
+                //修改背景颜色 用this来做做看
+                // console.log(_this);
+                this.style.background = 'pink';
+            },2000)
+        })
+
+
+        //需求二 从数组中返回偶数的元素
+        const arr = [1,6,10,23,22];
+/*         let result = arr.filter(function(item){
+            // if(item%2 === 0){
+            //     return true;
+            // }else{
+            //     return false;
+            // }
+        }); */
+        let result = arr.filter(item => item % 2 === 0);
+        console.log(result);
+    </script>
+</body>
+</html>

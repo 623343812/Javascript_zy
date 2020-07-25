@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*         const person = {
+            name:'Nicho',
+        };
+        // person.name = 'zhangsan';
+        person = {
+            name:'zhangsan',
+        };
+        console.log(person); */
+/*         console.log(typeof sss);//undefined
+        if(true){
+            
+            let value = 'blue';
+        } */
+
+
+        //Block Binding in Loops
+        // for(var i = 0; i < 10; i++){
+            
+        // }
+        // console.log(i);
+
+/*         for (var i = 0; i < 10; i++) {
+    process(items[i]);
+}
+
+// 这里仍然可以访问到 i */
+// console.log(i); 
+/* 
+     for(let i = 0; i < 10; i++){
+     }
+     console.log(i); */
+
+/*      var funcs = [];
+
+     for(let i = 0; i < 10; i++){
+         funcs.push(function(){
+             console.log(i);
+         });
+             
+     }
+         funcs.forEach(function(func){
+             func();
+         }); */
+
+        //  var funcs = [];
+        //  object = {
+        //      a:true,
+        //      b:true,
+        //      c:true
+        //  };
+        //  for(let key in object){
+        //      funcs.push(function(){
+        //          console.log(key);
+        //      });
+        //  }
+        //  funcs.forEach(function(func){
+        //      func();
+        //  });
+
+        //不会污染全局对象
+     let RegExp = 'Hello';
+     console.log(RegExp);
+     console.log(window.RegExp === RegExp);
+
+     const ncz = 'Hi';
+     console.log(ncz);
+     console.log(ncz in window);
+    </script>
+</body>
+</html>

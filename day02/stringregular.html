@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串与正则表达式</title>
+</head>
+<body>
+    <script>
+        // console.log('x'.repeat(3));
+        // console.log('hello'.repeat(2));
+        // console.log('avf'.repeat(4));
+
+/*         var indent = " ".repeat(4),
+        // console.log(indent);
+        indentLevel = 0;
+
+        var newIndent = indent.repeat(++indentLevel);
+        console.log(newIndent); */
+        function mixArgs(first,second){
+            console.log(first === arguments[0]);
+            console.log(second === arguments[1]);
+            first = 'c';
+            second = 'd';
+            console.log(first === arguments[0]);
+            console.log(second === arguments[1]);
+        }
+        mixArgs('a','b');
+        
+    </script>
+</body>
+</html>

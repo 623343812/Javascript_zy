@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简化对象写法</title>
+</head>
+<body>
+    <script>
+        let name = '尚硅谷';
+        let change = function(){
+            console.log('我们可以改变你');
+        };
+        const school = {
+            name,
+            change,
+            improve(){
+                console.log('提高技能');
+            }
+        };
+        console.log(school);
+
+    </script>
+</body>
+</html>
