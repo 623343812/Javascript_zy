@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>litterCalculator</title>
+    <style>
+        body {
+            background-color: #eee;
+
+        }
+        #calculator {
+            margin: 200px 0 0 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <p>
+            <input type="text" class="formerInput" value="1">
+            <span class="sign">+</span>
+            <input type="text" class="laterInput" value="1">
+            <span>=</span>
+            <span class="resultOutput">2</span>
+        </p>
+        <p>
+            <input type="button" value="+" class="btn" title="add">
+            <input type="button" value="-" class="btn" title="subtract">
+            <input type="button" value="*" class="btn" title="multip">
+            <input type="button" value="/" class="btn" title="divide">
+        </p>
+    </div>
+
+<!--     <script>
+        //获取元素
+        var calculator = document.querySelector("#calculator");
+        var formerInput = calculator.querySelector(".formerInput");
+        var sign = calculator.querySelector(".sign");
+        var laterInput = calculator.querySelector(".laterInput");
+        var resultOutput = calculator.querySelector(".resultOutput");
+        var btns = calculator.querySelectorAll(".btn");
+
+        //加
+        btns[0].onclick = addHandler;
+        //减
+        btns[1].onclick = subtractHandler;
+        //乘
+        btns[2].onclick = multipHandler;
+        //除
+        btns[3].onclick = divideHandler;
+
+        //加
+        function addHandler() {
+            sign.innerHTML = "+";
+            resultOutput.innerHTML = +formerInput.value + +laterInput.value;
+        }
+        //减
+        function subtractHandler() {
+            sign.innerHTML = "-";
+            resultOutput.innerHTML = formerInput.value - laterInput.value;
+        }
+        //乘
+        function multipHandler() {
+            sign.innerHTML = "*";
+            resultOutput.innerHTML = formerInput.value * laterInput.value;
+        }
+        //除
+        function divideHandler() {
+            sign.innerHTML = "/";
+            resultOutput.innerHTML = formerInput.value / laterInput.value;
+        } -->
+
+        <!-- <script> //改进1 循环
+            //获取元素
+            var calculator = document.querySelector("#calculator");
+            var formerInput = calculator.querySelector(".formerInput");
+            var sign = calculator.querySelector(".sign");
+            var laterInput = calculator.querySelector(".laterInput");
+            var resultOutput = calculator.querySelector(".resultOutput");
+            var btns = calculator.querySelectorAll(".btn");
+
+            //绑定事件
+            for(var i = 0; i < btns.length; i++) {
+                btns[i].onclick = function () {
+                    switch(this.title) {
+                        case'add':
+                        addHandler();
+                        break;
+                        case'subtract':
+                        subtractHandler();
+                        break;
+                        case'multip':
+                        multipHandler();
+                        break;
+                        case'divide':
+                        divideHandler();
+                        break;
+                    }
+                };
+            }
+
+            // //加
+            // btns[0].onclick = addHandler;
+            // //减
+            // btns[1].onclick = subtractHandler;
+            // //乘
+            // btns[2].onclick = multipHandler;
+            // //除
+            // btns[3].onclick = divideHandler;
+
+            //加
+            function addHandler() {
+                sign.innerHTML = "+";
+                resultOutput.innerHTML = +formerInput.value + +laterInput.value;
+            }
+            //减
+            function subtractHandler() {
+                sign.innerHTML = "-";
+                resultOutput.innerHTML = formerInput.value - laterInput.value;
+            }
+            //乘
+            function multipHandler() {
+                sign.innerHTML = "*";
+                resultOutput.innerHTML = formerInput.value * laterInput.value;
+            }
+            //除
+            function divideHandler() {
+                sign.innerHTML = "/";
+                resultOutput.innerHTML = formerInput.value / laterInput.value;
+            }
+
+        </script> -->
+        <!-- <script> //改进2 提取函数
+            //获取元素
+            var calculator = document.querySelector("#calculator");
+            var formerInput = calculator.querySelector(".formerInput");
+            var sign = calculator.querySelector(".sign");
+            var laterInput = calculator.querySelector(".laterInput");
+            var resultOutput = calculator.querySelector(".resultOutput");
+            var btns = calculator.querySelectorAll(".btn");
+
+            //绑定事件
+            each(btns,function (index,elem) {
+                elem.onclick = function () {
+                    switch(this.title) {
+                        case'add':
+                        addHandler();
+                        break;
+                        case'subtract':
+                        subtractHandler();
+                        break;
+                        case'multip':
+                        multipHandler();
+                        break;
+                        case'divide':
+                        divideHandler();
+                        break;
+                    }
+                };
+            });
+/*             for(var i = 0; i < btns.length; i++) {
+                btns[i].onclick = function () {
+                    switch(this.title) {
+                        case'add':
+                        addHandler();
+                        break;
+                        case'subtract':
+                        subtractHandler();
+                        break;
+                        case'multip':
+                        multipHandler();
+                        break;
+                        case'divide':
+                        divideHandler();
+                        break;
+                    }
+                };
+            }
+ */
+            //遍历
+            function each(array, fn) {
+                for(var i =0; i < array.length; i++) {
+                    fn(i,array[i])
+                }
+            }
+
+            // //加
+            // btns[0].onclick = addHandler;
+            // //减
+            // btns[1].onclick = subtractHandler;
+            // //乘
+            // btns[2].onclick = multipHandler;
+            // //除
+            // btns[3].onclick = divideHandler;
+
+            //更新符号
+            function updateSign(symbol) {
+                sign.innerHTML = symbol;
+            }
+
+            //加法
+            function add(num1, num2) {
+                return +num1 + +num2;
+            }
+            //减法
+            function subtract(num1, num2) {
+                return num1 - num2;
+            }
+            //乘法
+            function multip(num1, num2) {
+                return num1 * num2;
+            }
+            //除法
+            function divide(num1, num2) {
+                return num1 / num2;
+            }
+            //输出结果
+            function outputResult(result) {
+                resultOutput.innerHTML = result;
+            }
+            //加
+            function addHandler() {
+                // sign.innerHTML = "+";
+                updateSign('+');
+                outputResult(add(formerInput.value, laterInput.value))
+            }
+            //减
+            function subtractHandler() {
+                // sign.innerHTML = "-";
+                updateSign('-');
+                outputResult(subtract(formerInput.value, laterInput.value))
+            }
+            //乘
+            function multipHandler() {
+                // sign.innerHTML = "*";
+                updateSign('*');
+                outputResult(multip(formerInput.value, laterInput.value))
+            }
+            //除
+            function divideHandler() {
+                // sign.innerHTML = "/";
+                updateSign('/');
+                outputResult(divide(formerInput.value, laterInput.value))
+            }
+
+        </script> -->
+        <script> //改进3 管理代码
+            //获取元素
+            // var calculator = document.querySelector("#calculator");
+            // var formerInput = calculator.querySelector(".formerInput");
+            // var sign = calculator.querySelector(".sign");
+            // var laterInput = calculator.querySelector(".laterInput");
+            // var resultOutput = calculator.querySelector(".resultOutput");
+            // var btns = calculator.querySelectorAll(".btn");
+
+            var wrapElem = document.querySelector("calculator");
+            var calculatorElem = {
+                formerInput:wrapElem.querySelector(".formerInput"),
+                sign:wrapElem.querySelector(".sign"),
+                laterInput:wrapElem.querySelector(".laterInput"),
+                resultOutput:wrapElem.querySelector(".resultOutput"),
+                btns:wrapElem.querySelectorAll(".btn")
+            }
+
+            //绑定事件
+            each(calculatorElem.btns,function (index,elem) {
+                elem.onclick = function () {
+                    switch(this.title) {
+                        case'add':
+                        addHandler();
+                        break;
+                        case'subtract':
+                        subtractHandler();
+                        break;
+                        case'multip':
+                        multipHandler();
+                        break;
+                        case'divide':
+                        divideHandler();
+                        break;
+                    }
+                };
+            });
+/*             for(var i = 0; i < btns.length; i++) {
+                btns[i].onclick = function () {
+                    switch(this.title) {
+                        case'add':
+                        addHandler();
+                        break;
+                        case'subtract':
+                        subtractHandler();
+                        break;
+                        case'multip':
+                        multipHandler();
+                        break;
+                        case'divide':
+                        divideHandler();
+                        break;
+                    }
+                };
+            }
+ */
+            //遍历
+            function each(array, fn) {
+                for(var i =0; i < array.length; i++) {
+                    fn(i,array[i])
+                }
+            }
+
+            // //加
+            // btns[0].onclick = addHandler;
+            // //减
+            // btns[1].onclick = subtractHandler;
+            // //乘
+            // btns[2].onclick = multipHandler;
+            // //除
+            // btns[3].onclick = divideHandler;
+
+            //更新符号
+            function updateSign(symbol) {
+                calculatorElem.sign.innerHTML = symbol;
+            }
+
+            //加法
+            function add(num1, num2) {
+                return +num1 + +num2;
+            }
+            //减法
+            function subtract(num1, num2) {
+                return num1 - num2;
+            }
+            //乘法
+            function multip(num1, num2) {
+                return num1 * num2;
+            }
+            //除法
+            function divide(num1, num2) {
+                return num1 / num2;
+            }
+            //输出结果
+            function outputResult(result) {
+                calculatorElem.resultOutput.innerHTML = result;
+            }
+            //加
+            function addHandler() {
+                // sign.innerHTML = "+";
+                updateSign('+');
+                outputResult(add(calculatorElem.formerInput.value, calculatorElem.laterInput.value))
+            }
+            //减
+            function subtractHandler() {
+                // sign.innerHTML = "-";
+                updateSign('-');
+                outputResult(subtract(calculatorElem.formerInput.value, calculatorElem.laterInput.value))
+            }
+            //乘
+            function multipHandler() {
+                // sign.innerHTML = "*";
+                updateSign('*');
+                outputResult(multip(calculatorElem.formerInput.value, calculatorElem.laterInput.value))
+            }
+            //除
+            function divideHandler() {
+                // sign.innerHTML = "/";
+                updateSign('/');
+                outputResult(divide(calculatorElem.formerInput.value, calculatorElem.laterInput.value))
+            }
+
+        </script>
+        </body>
+</html>
