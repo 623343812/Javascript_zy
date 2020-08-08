@@ -321,22 +321,27 @@
                 calculatorElem.sign.innerHTML = symbol;
             }
 
+            var operation = {
             //加法
-            function add(num1, num2) {
+            add: function (num1, num2) {
                 return +num1 + +num2;
-            }
+            },
             //减法
-            function subtract(num1, num2) {
+            subtract: function (num1, num2) {
                 return num1 - num2;
-            }
+            },
             //乘法
-            function multip(num1, num2) {
+            multip: function (num1, num2) {
                 return num1 * num2;
-            }
+            },
             //除法
-            function divide(num1, num2) {
+            divide: function (num1, num2) {
                 return num1 / num2;
             }
+
+            }
+
+
             //输出结果
             function outputResult(result) {
                 calculatorElem.resultOutput.innerHTML = result;
@@ -345,25 +350,25 @@
             function addHandler() {
                 // sign.innerHTML = "+";
                 updateSign('+');
-                outputResult(add(calculatorElem.formerInput.value, calculatorElem.laterInput.value))
+                outputResult(operation.add(calculatorElem.formerInput.value, calculatorElem.laterInput.value))
             }
             //减
             function subtractHandler() {
                 // sign.innerHTML = "-";
                 updateSign('-');
-                outputResult(subtract(calculatorElem.formerInput.value, calculatorElem.laterInput.value))
+                outputResult(operation.subtract(calculatorElem.formerInput.value, calculatorElem.laterInput.value))
             }
             //乘
             function multipHandler() {
                 // sign.innerHTML = "*";
                 updateSign('*');
-                outputResult(multip(calculatorElem.formerInput.value, calculatorElem.laterInput.value))
+                outputResult(operation.multip(calculatorElem.formerInput.value, calculatorElem.laterInput.value))
             }
             //除
             function divideHandler() {
                 // sign.innerHTML = "/";
                 updateSign('/');
-                outputResult(divide(calculatorElem.formerInput.value, calculatorElem.laterInput.value))
+                outputResult(operation.divide(calculatorElem.formerInput.value, calculatorElem.laterInput.value))
             }
 
         </script>
